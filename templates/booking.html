@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Project | Ridwan Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Ridwan<span>Studio</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Booking Hero Section -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Book Your <span>Project</span></h1>
+                <p>Fill out the form below to book a consultation slot. I'll get back to you within 24 hours to confirm
+                    your booking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Process Section -->
+    <section class="booking-process">
+        <div class="container">
+            <h2 class="section-title">Booking <span>Process</span></h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Fill the Form</h3>
+                        <p>Complete the booking form with your project details and preferred consultation time.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Confirmation</h3>
+                        <p>I'll confirm your booking via email within 24 hours and send a calendar invitation.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>We'll have a detailed discussion about your project requirements and timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <h2>Project Booking Form</h2>
+                <p>Please provide detailed information about your project so I can better understand your needs.</p>
+
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Project Details</h3>
+
+                        <div class="form-group">
+                            <label for="package">Select Package <span class="required">*</span></label>
+                            <select id="package" name="package" required>
+                                <option value="">Select a package</option>
+                                <option value="basic">Basic Website - ₦200,000</option>
+                                <option value="business">Business Website - ₦500,000</option>
+                                <option value="ecommerce">E-Commerce Store - ₦800,000</option>
+                                <option value="custom">Custom Project (Quote after consultation)</option>
+                            </select>
+                            <span class="error-message" id="packageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectDescription">Project Description <span class="required">*</span></label>
+                            <textarea id="projectDescription" name="projectDescription" rows="4"
+                                placeholder="Please describe your project in detail..." required></textarea>
+                            <span class="error-message" id="descriptionError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range (₦)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="50-250k">₦50,000 - ₦250,000</option>
+                                <option value="250k-500k">₦250,000 - ₦500,000</option>
+                                <option value="500k-1m">₦500,000 - ₦1,000,000</option>
+                                <option value="1m+">₦1,000,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Preferred Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1month">Within 1 month</option>
+                                <option value="3months">Within 3 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Consultation Scheduling</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferredDate">Preferred Date <span class="required">*</span></label>
+                                <input type="text" id="preferredDate" name="preferredDate" placeholder="Select date"
+                                    required>
+                                <span class="error-message" id="dateError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Time <span class="required">*</span></label>
+                                <select id="preferredTime" name="preferredTime" required>
+                                    <option value="">Select time</option>
+                                    <option value="9am-11am">9:00 AM - 11:00 AM</option>
+                                    <option value="11am-1pm">11:00 AM - 1:00 PM</option>
+                                    <option value="1pm-3pm">1:00 PM - 3:00 PM</option>
+                                    <option value="3pm-5pm">3:00 PM - 5:00 PM</option>
+                                </select>
+                                <span class="error-message" id="timeError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timezone">Your Timezone</label>
+                            <select id="timezone" name="timezone">
+                                <option value="WAT">West Africa Time (WAT)</option>
+                                <option value="GMT">Greenwich Mean Time (GMT)</option>
+                                <option value="EST">Eastern Standard Time (EST)</option>
+                                <option value="PST">Pacific Standard Time (PST)</option>
+                                <option value="other">Other (please specify in notes)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="meetingMethod">Preferred Meeting Method</label>
+                            <select id="meetingMethod" name="meetingMethod">
+                                <option value="video">Video Call (Google Meet/Zoom)</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="gmail">Gmail </option>
+                                <option value="whatsapp">Whatsapp </option>
+                                <option value="in-person">In-Person (Lagos only)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+
+                        <div class="form-group">
+                            <label for="reference">How did you hear about me?</label>
+                            <select id="reference" name="reference">
+                                <option value="">Select option</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral</option>
+                                <option value="portfolio">Saw my portfolio</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Additional Notes or Questions</label>
+                            <textarea id="notes" name="notes" rows="3"
+                                placeholder="Any additional information you'd like to share..."></textarea>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="files">Upload Files (Optional)</label>
+                            <input type="file" id="files" name="files" multiple>
+                            <p class="file-help">You can upload reference images, documents, or other files. Max 10MB
+                                total.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-accent">
+                            <i class="fas fa-calendar-check"></i> Book Consultation
+                        </button>
+                    </div>
+                </form>
+
+                <div id="bookingSuccess" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Booking Request Submitted!</h3>
+                    <p>Thank you for your booking request. I'll review your information and confirm your consultation
+                        slot within 24 hours.</p>
+                    <p>You will receive a confirmation email at <span id="userEmail"></span>.</p>
+                    <a href="index.html" class="btn">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Booking <span>FAQ</span></h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How soon will you confirm my booking?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I typically confirm bookings within 24 hours on business days. If you submit a booking over
+                            the weekend, you can expect a response by Monday.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I need to reschedule my consultation?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If you need to reschedule, please reply to the confirmation email at least 24 hours before
+                            your scheduled time, and I'll be happy to arrange a new time that works for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What should I prepare for the consultation?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It's helpful to have a clear idea of your project goals, target audience, and any specific
+                            features you want. If you have examples of websites you like or reference materials, please
+                            have them ready.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is the consultation free?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, the initial consultation is completely free. This gives us a chance to discuss your
+                            project and determine if we're a good fit to work together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ridwan Studio</h3>
+                    <p>Creating beautiful, functional websites that help businesses grow and succeed in the digital
+                        world.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="packages.html">Basic Website</a></li>
+                        <li><a href="packages.html">Business Package</a></li>
+                        <li><a href="packages.html">E-Commerce Store</a></li>
+                        <li><a href="packages.html">Additional Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hammed-ridwan-ayomide-3b90a3381/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/2347034727964"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ridwan Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="booking.js"></script>
+</body>
+
+</html>

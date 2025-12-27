@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Quote | Ridwan Studio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="customquote.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">WebDev<span>Studio</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Custom Quote Hero Section -->
+    <section class="quote-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Request a <span>Custom Quote</span></h1>
+                <p>Need something beyond our standard packages? Fill out this detailed form to get a personalized quote for your project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Process Section -->
+    <section class="quote-process">
+        <div class="container">
+            <h2 class="section-title">How It <span>Works</span></h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Submit Details</h3>
+                        <p>Fill out the form with your project requirements and specifications.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Review & Analysis</h3>
+                        <p>I'll analyze your requirements and prepare a detailed proposal.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Receive Quote</h3>
+                        <p>You'll receive a comprehensive quote within 2 business days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Quote Form Section -->
+    <section class="custom-quote-section">
+        <div class="container">
+            <div class="quote-form-container">
+                <h2>Custom Project Quote Request</h2>
+                <p>Please provide as much detail as possible about your project so I can give you an accurate estimate.</p>
+                
+                <form id="customQuoteForm" class="custom-quote-form">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Project Overview</h3>
+                        
+                        <div class="form-group">
+                            <label for="projectName">Project Name <span class="required">*</span></label>
+                            <input type="text" id="projectName" name="projectName" required>
+                            <span class="error-message" id="projectNameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type <span class="required">*</span></label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select project type</option>
+                                <option value="website">Website</option>
+                                <option value="ecommerce">E-Commerce Store</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="mobile">Mobile App</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="other">Other (please specify)</option>
+                            </select>
+                            <span class="error-message" id="projectTypeError"></span>
+                        </div>
+                        
+                        <div class="form-group" id="otherProjectTypeContainer" style="display: none;">
+                            <label for="otherProjectType">Specify Project Type</label>
+                            <input type="text" id="otherProjectType" name="otherProjectType">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectDescription">Project Description <span class="required">*</span></label>
+                            <textarea id="projectDescription" name="projectDescription" rows="4" placeholder="Please describe your project in detail, including its purpose, target audience, and main goals..." required></textarea>
+                            <span class="error-message" id="descriptionError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Technical Requirements</h3>
+                        
+                        <div class="form-group">
+                            <label>Required Features (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="responsive"> Responsive Design (Mobile-Friendly)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="cms"> Content Management System
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="ecommerce"> E-Commerce Functionality
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="user-auth"> User Registration/Login
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="payment"> Payment Gateway Integration
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="seo"> SEO Optimization
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="social"> Social Media Integration
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="api"> Third-Party API Integration
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="multilingual"> Multilingual Support
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pages">Estimated Number of Pages</label>
+                            <select id="pages" name="pages">
+                                <option value="">Select number of pages</option>
+                                <option value="1-5">1-5 pages</option>
+                                <option value="6-10">6-10 pages</option>
+                                <option value="11-20">11-20 pages</option>
+                                <option value="20+">20+ pages</option>
+                                <option value="unknown">Not sure</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="designPreferences">Design Preferences</label>
+                            <select id="designPreferences" name="designPreferences">
+                                <option value="">Select preference</option>
+                                <option value="modern">Modern & Minimalist</option>
+                                <option value="corporate">Corporate & Professional</option>
+                                <option value="creative">Creative & Artistic</option>
+                                <option value="bold">Bold & Colorful</option>
+                                <option value="no-preference">No preference</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contentManagement">Who Will Manage Content?</label>
+                            <select id="contentManagement" name="contentManagement">
+                                <option value="">Select option</option>
+                                <option value="client">I will manage content myself</option>
+                                <option value="developer">I need ongoing content management</option>
+                                <option value="both">Combination of both</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Timeline & Budget</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="timeline">Project Timeline <span class="required">*</span></label>
+                                <select id="timeline" name="timeline" required>
+                                    <option value="">Select timeline</option>
+                                    <option value="urgent">Urgent (1-2 weeks)</option>
+                                    <option value="2-4 weeks">2-4 weeks</option>
+                                    <option value="1-2 months">1-2 months</option>
+                                    <option value="2-3 months">2-3 months</option>
+                                    <option value="3+ months">3+ months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                                <span class="error-message" id="timelineError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Budget Range (₦) <span class="required">*</span></label>
+                                <select id="budget" name="budget" required>
+                                    <option value="">Select budget range</option>
+                                    <option value="300-500k">₦300,000 - ₦500,000</option>
+                                    <option value="500k-1m">₦500,000 - ₦1,000,000</option>
+                                    <option value="1m-2m">₦1,000,000 - ₦2,000,000</option>
+                                    <option value="2m-5m">₦2,000,000 - ₦5,000,000</option>
+                                    <option value="5m+">₦5,000,000+</option>
+                                    <option value="not-sure">Not sure</option>
+                                </select>
+                                <span class="error-message" id="budgetError"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalServices">Additional Services Needed</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="logo"> Logo Design
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="content"> Content Writing
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="seo"> SEO Services
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="hosting"> Hosting Setup
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="services" value="maintenance"> Ongoing Maintenance
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="referenceWebsite">Reference Websites (Optional)</label>
+                            <textarea id="referenceWebsite" name="referenceWebsite" rows="3" placeholder="Please list any websites you like as examples of design or functionality..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="targetLaunch">Target Launch Date (Optional)</label>
+                            <input type="date" id="targetLaunch" name="targetLaunch">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="howHear">How did you hear about me?</label>
+                            <select id="howHear" name="howHear">
+                                <option value="">Select option</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral</option>
+                                <option value="portfolio">Saw my portfolio</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group file-upload">
+                            <label for="projectFiles">Upload Files (Optional)</label>
+                            <input type="file" id="projectFiles" name="projectFiles" multiple>
+                            <p class="file-help">You can upload reference images, documents, wireframes, or other relevant files. Max 20MB total.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-accent">
+                            <i class="fas fa-paper-plane"></i> Request Custom Quote
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="quoteSuccess" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Quote Request Submitted!</h3>
+                    <p>Thank you for your detailed request. I'll review your project requirements and get back to you with a custom quote within 2 business days.</p>
+                    <p>You will receive a confirmation email at <span id="userEmail"></span>.</p>
+                    <div class="success-actions">
+                        <a href="index.html" class="btn">Back to Home</a>
+                        <a href="portfolio.html" class="btn btn-accent">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Custom Quote <span>FAQ</span></h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does it take to receive a custom quote?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I typically provide custom quotes within 2 business days after receiving your detailed project information. For complex projects, it might take up to 3 business days.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What information do you need to provide an accurate quote?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The more detail you provide, the more accurate my quote will be. Key information includes: project goals, target audience, desired features, design preferences, timeline, and budget range.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I make changes to my requirements after receiving the quote?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can request adjustments to the project scope. If the changes affect the timeline or cost, I'll provide an updated quote reflecting those changes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long is the quote valid for?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Quotes are typically valid for 30 days. After that period, I may need to reassess the requirements and provide an updated quote, especially if project requirements or market conditions have changed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Ridwan Studio</h3>
+                    <p>Creating beautiful, functional websites that help businesses grow and succeed in the digital world.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="packages.html#basic-details">Basic Website</a></li>
+                        <li><a href="packages.html#business-details">Business Package</a></li>
+                        <li><a href="packages.html#ecommerce-details">E-Commerce Store</a></li>
+                        <li><a href="customquote.html">Custom Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hammed-ridwan-ayomide-3b90a3381/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/2347034727964"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ridwan Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="customquote.js"></script>
+</body>
+</html>
